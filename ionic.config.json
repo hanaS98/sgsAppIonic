@@ -1,0 +1,7 @@
+{
+  "name": "SGSAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
