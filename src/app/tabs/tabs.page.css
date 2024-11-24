@@ -1,0 +1,13 @@
+.img-filter{
+  filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(24%) hue-rotate(146deg) brightness(97%) contrast(84%);
+}
+.img-size{
+  width: 30px;
+}
+*{
+  font-family: "tajawal", sans-serif;
+}
+ion-label{
+  font-size: 11px;
+}
+

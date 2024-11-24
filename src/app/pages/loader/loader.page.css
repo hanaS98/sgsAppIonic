@@ -1,0 +1,93 @@
+.splash-bg{
+  height: 100vh;
+  width: 100%;
+  background:linear-gradient(45deg, rgba(154,125,90,1) 0%, rgba(29,36,55,1) 100%);
+  background-size: 300% 300%;
+  animation: color 5s ease-in-out infinite;
+}
+@keyframes color{
+  0%{
+    background-position: 100% 10%;
+
+  }
+  50%{
+    background-position: 100% 80%;
+
+  }
+  100%{
+    background-position: 100% 10%;
+
+  }
+}
+
+.globe-decoraction {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.globe-decoraction .globe-decoraction-img{
+  width: 100px;
+  max-width: 300px;
+  min-width: 100px;
+  margin-top: -10px;
+  animation: globe 1s ease-in-out;
+}
+.shadow{
+  opacity: 0;
+  margin-top: 10px;
+  animation: appear 3s 1s  forwards;
+}
+.arrow{
+  opacity: 0;
+  animation: appear 3s 1s  forwards;
+}
+.arabic-title,.english-title{
+  color: white;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  visibility: hidden;
+}
+.arabic-title{
+  font-family: 'Beiruti', sans-serif;
+  font-size: 27px;
+  direction: rtl;
+  animation:hideText .2s 2s forwards, typing 3s 2s steps(32);
+}
+.english-title{
+  font-family: "Righteous", serif;
+  font-size: 23px;
+  direction: ltr;
+  animation:hideText .2s 2s forwards, typing 3s 2s steps(23);
+}
+@keyframes typing{
+  from{width: 0;}
+}
+@keyframes hideText{
+  100%{
+    visibility: visible;
+  }
+}
+@keyframes globe{
+  0%{
+    transform: scale(50);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+

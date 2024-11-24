@@ -1,0 +1,40 @@
+<div class="bg"></div>
+  <ion-header [translucent]="true">
+    <ion-toolbar color="translucent">
+      <ion-img slot="start" src="../../assets/sgs-new-logo.svg" class="logo"></ion-img>
+      <ion-buttons slot="end">
+        <ion-button class="lang">EN</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-text style="color:white;">
+      <h2>{{pageHeader}}</h2>
+      <p>{{description}}</p>
+    </ion-text>
+
+
+    <ion-row class="ion-padding-top">
+      <ion-col size="6"  size-md="4" *ngFor="let info of information">
+        <ion-card class="ion-text-center" routerLink="{{info.url}}">
+          <ion-card-header class="ion-align-items-center">
+            <div style="width: 60px;">
+              <ion-img src="{{info.img}}" class="img-filter"></ion-img>
+            </div>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-text>
+              <p style="font-size: 16px;font-weight: bold;color: white;">{{info.headerTitle}}</p>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+
+
+  </ion-content>
+
