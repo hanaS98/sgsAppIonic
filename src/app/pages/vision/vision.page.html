@@ -15,18 +15,16 @@
     <ion-breadcrumb routerLink="/tabs/tab1" style="font-size: 14px;color: #402202;">الرئيسية</ion-breadcrumb>
     <ion-breadcrumb href="#" style="font-size: 14px;color: #402202;">رؤية الهيئة</ion-breadcrumb>
   </ion-breadcrumbs>
-  <ion-item class="ion-no-padding">
-    <ion-text>
-      <p>أُنشئت هيئة المساحة الجيولوجية السعودية في عام 1420ه‍ 1999م، بقرار رقم 115 والصادر عن مجلس الوزراء الموقر. وترتبط هيئة المساحة الجيولوجية السعودية إرتباطاً مباشراً بوزارة الصناعة والثروة المعدنية. ولها شخصية اعتبارية وتتمتع بالأهلية الكاملة لتحقيق التنظيم الخاص به</p>
-    </ion-text>
-  </ion-item>
+  <ion-text>
+    <p style="color:#160000;">أُنشئت هيئة المساحة الجيولوجية السعودية في عام 1420ه‍ 1999م، بقرار رقم 115 والصادر عن مجلس الوزراء الموقر. وترتبط هيئة المساحة الجيولوجية السعودية إرتباطاً مباشراً بوزارة الصناعة والثروة المعدنية. ولها شخصية اعتبارية وتتمتع بالأهلية الكاملة لتحقيق التنظيم الخاص به</p>
+  </ion-text>
   <ion-buttons slot="end">
     <ion-back-button icon="caret-back" 	color="#BF986E"></ion-back-button>
   </ion-buttons>
 </ion-content>
-<ion-fab slot="fixed" vertical="bottom" horizontal="end">
-  <ion-fab-button>
-    <ion-back-button icon="caret-back" 	color="#BF986E"></ion-back-button>
+<ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="back()">
+  <ion-fab-button title="تراجع">
+    <ion-icon name="caret-back-outline"></ion-icon>
   </ion-fab-button>
 </ion-fab>
 <!-- <ion-buttons slot="end">

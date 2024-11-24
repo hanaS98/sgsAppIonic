@@ -1,9 +1,9 @@
 <div class="bg"></div>
 <ion-header [translucent]="false">
   <ion-toolbar>
-    <ion-img slot="start" src="/assets/sgs-new-logo-dark.png" class="logo"></ion-img>
+    <ion-img slot="start" src="assets/sgs-new-logo-dark.png" class="logo"></ion-img>
     <ion-buttons slot="end">
-      <ion-back-button icon="caret-back" 	color="#BF986E" class="lang"></ion-back-button>
+      <ion-button class="lang">EN</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -15,9 +15,12 @@
     <ion-breadcrumb routerLink="/tabs/tab1" style="font-size: 14px;color: #402202;">الرئيسية</ion-breadcrumb>
     <ion-breadcrumb href="#" style="font-size: 14px;color: #402202;">رسالة الهيئة</ion-breadcrumb>
   </ion-breadcrumbs>
-  <ion-item class="ion-no-padding">
-    <ion-text>
-      <p>نستفيد من خبراتنا وشراكاتنا والتقنيات الحديثة لتحقيق قيمة مميّزة بوصفنا كمرجعية عليا عالمية في علوم الأرض للقطاعين العام والخاص في المملكة من خلال توفير خرائط وبيانات جيولوجية برؤى موضوعية علمية، وتنمية جيل قادم من المواهب</p>
-    </ion-text>
-  </ion-item>
+  <ion-text>
+    <p style="color:#160000;">نستفيد من خبراتنا وشراكاتنا والتقنيات الحديثة لتحقيق قيمة مميّزة بوصفنا كمرجعية عليا عالمية في علوم الأرض للقطاعين العام والخاص في المملكة من خلال توفير خرائط وبيانات جيولوجية برؤى موضوعية علمية، وتنمية جيل قادم من المواهب</p>
+  </ion-text>
 </ion-content>
+<ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="back()">
+  <ion-fab-button title="تراجع">
+    <ion-icon name="caret-back-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

@@ -2,12 +2,10 @@
 <ion-header [translucent]="false">
   <ion-toolbar>
     <ion-img slot="start" src="assets/sgs-new-logo-dark.png" class="logo"></ion-img>
-    <!-- <ion-buttons slot="end">
-      <ion-button class="lang">EN</ion-button>
-    </ion-buttons> -->
     <ion-buttons slot="end">
-      <ion-back-button icon="caret-back" 	color="#BF986E" class="lang"></ion-back-button>
+      <ion-button class="lang">EN</ion-button>
     </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
@@ -18,9 +16,8 @@
     <ion-breadcrumb routerLink="/tabs/tab1" style="font-size: 14px;color: #402202;" i18n>الرئيسية</ion-breadcrumb>
     <ion-breadcrumb href="#" style="font-size: 14px;color: #402202;" i18n>أهداف الهيئة</ion-breadcrumb>
   </ion-breadcrumbs>
-  <ion-item class="ion-no-padding">
-    <ion-text>
-      <div class="text-editor page-editor  ">
+  <ion-text>
+    <div class="text-editor page-editor  " style="color:#160000;">
 
 <p i18n>تحقيقا للرؤى والتطلعات الاستراتيجية التي أُنشئت الهيئة من أجلها، وتحقيقا لرسالتها بصورة رئيسة لتزويد المجتمع بالمعلومات الجيولوجية الأساسية، فقد بلورت الهيئة أهدافها الرئيسة (Principle Goals) علي النحو التالي:</p>
 <h4 i18n>تزويد المجتمع بالمعلومات والخرائط الجيولوجية الأساسية</h4>
@@ -179,7 +176,11 @@
 </ol>
 <p>&nbsp;</p>
 
-                                                    </div>
-    </ion-text>
-  </ion-item>
+                                                  </div>
+  </ion-text>
 </ion-content>
+<ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="back()">
+  <ion-fab-button title="تراجع">
+    <ion-icon name="caret-back-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

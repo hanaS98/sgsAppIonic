@@ -1,1 +1,30 @@
 
+ion-tab-bar, ion-tab-button{
+  background-color: white;
+}
+
+ion-tab-button div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 50px;
+}
+ion-tab-button.tab-selected div{
+  background-color: #edddcb8a;
+  border-radius: 10px;
+}
+ion-tab-button div ion-icon{
+  width: 24px;
+  height: 24px;
+}
+ion-tab-button.tab-selected div ion-icon,
+ion-tab-button:hover ion-icon,
+ion-tab-button:hover ion-label{
+  color:#BF986E;
+}
+ion-tab-button.tab-selected div ion-label{
+  color:#BF986E;
+  font-weight: bold;
+}

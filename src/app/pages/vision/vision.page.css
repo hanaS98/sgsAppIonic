@@ -32,3 +32,10 @@ ion-breadcrumb a{
   padding: 0;
   padding-inline-start:0;
 }
+ion-fab-button::part(native){
+  background-color: #a17b52;
+}
+ion-fab-button::part(native):hover{
+  background-color: #b68c5e;
+}
+
