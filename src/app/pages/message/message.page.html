@@ -1,26 +1,26 @@
 <div class="bg"></div>
 <ion-header [translucent]="false">
   <ion-toolbar>
-    <ion-img slot="start" src="assets/sgs-new-logo-dark.png" class="logo"></ion-img>
+    <ion-img slot="start" src="assets/SGSNEWLOGOdark.svg" class="logo"></ion-img>
     <ion-buttons slot="end">
-      <ion-button class="lang">EN</ion-button>
+      <ion-button (click)="changeLang()">{{lang}}</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
   <ion-text>
-    <h1 style="font-weight: bold;color: #a17b52;margin: 20px 0 0;">رسالة الهيئة</h1>
+    <h1 style="font-weight: bold;color: var(--main-color);margin: 20px 0 0;">{{header}}</h1>
   </ion-text>
   <ion-breadcrumbs class="ion-no-padding">
-    <ion-breadcrumb routerLink="/tabs/tab1" style="font-size: 14px;color: #402202;">الرئيسية</ion-breadcrumb>
-    <ion-breadcrumb href="#" style="font-size: 14px;color: #402202;">رسالة الهيئة</ion-breadcrumb>
+    <ion-breadcrumb routerLink="/tabs/tab1" style="font-size: 14px;color: var(--secendary-color);">{{home}}</ion-breadcrumb>
+    <ion-breadcrumb  style="font-size: 14px;color: var(--secendary-color);">{{header}}</ion-breadcrumb>
   </ion-breadcrumbs>
   <ion-text>
-    <p style="color:#160000;">نستفيد من خبراتنا وشراكاتنا والتقنيات الحديثة لتحقيق قيمة مميّزة بوصفنا كمرجعية عليا عالمية في علوم الأرض للقطاعين العام والخاص في المملكة من خلال توفير خرائط وبيانات جيولوجية برؤى موضوعية علمية، وتنمية جيل قادم من المواهب</p>
+    <p style="color:var(--main-color);">{{text}}</p>
   </ion-text>
 </ion-content>
 <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="back()">
   <ion-fab-button title="تراجع">
-    <ion-icon name="caret-back-outline"></ion-icon>
+    <ion-icon id="backIcon" name="caret-back-outline"></ion-icon>
   </ion-fab-button>
 </ion-fab>

@@ -12,7 +12,7 @@ ion-tab-button div{
   height: 50px;
 }
 ion-tab-button.tab-selected div{
-  background-color: #edddcb8a;
+  background-color: rgb(2 117 124 / 10%);
   border-radius: 10px;
 }
 ion-tab-button div ion-icon{
@@ -22,9 +22,9 @@ ion-tab-button div ion-icon{
 ion-tab-button.tab-selected div ion-icon,
 ion-tab-button:hover ion-icon,
 ion-tab-button:hover ion-label{
-  color:#BF986E;
+  color:var(--main-color);
 }
 ion-tab-button.tab-selected div ion-label{
-  color:#BF986E;
+  color:var(--main-color);
   font-weight: bold;
 }

@@ -1,9 +1,9 @@
 <div class="bg"></div>
   <ion-header [translucent]="true">
     <ion-toolbar color="translucent">
-      <ion-img slot="start" src="assets/sgs-new-logo.svg" class="logo"></ion-img>
+      <ion-img slot="start" src="assets/SGSNEWLOGO.svg" class="logo"></ion-img>
       <ion-buttons slot="end">
-        <ion-button class="lang">EN</ion-button>
+        <ion-button class="lang" (click)="changeLang()">{{lang}}</ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>

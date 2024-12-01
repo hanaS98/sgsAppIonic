@@ -1,18 +1,17 @@
-*{
-  font-family: "Tajawal", serif;
-}
 ion-header{
   border-radius: 0 0 25px 25px;
-  padding: 10px 5px;
+  padding: 10px;
   background-color: white;
 }
 .logo{
   width: 200px;
 }
-.lang{
-  border: 1px solid #BF986E;
-  color: #BF986E;
-  border-radius: 5px;
+ion-button{
+  --color: var(--secendary-color);
+  --border-color:var(--main-color);
+  --border-radius: 5px;
+  --border-style: solid;
+  --border-width: 1px;
 }
 .bg{
   /* background-image: url('../../assets/geology-bg.svg'); */
@@ -36,7 +35,8 @@ ion-card{
   align-content: center; */
 }
 .card-icon-bg{
-  background-color: #EAD4BD;
+
+  background-color: rgb(20 117 124 / 80%);
   width: 80px;
   height: 80px;
   padding: 20px;
@@ -58,14 +58,14 @@ ion-card{
 .card-icon-bg::before{
   top: -5px;
   right: -5px;
-  border-color: #BF986E transparent transparent;
+  border-color: var(--secendary-color) transparent transparent;
   border-radius: 100%;
   transform: rotate(45deg);
 }
 .card-icon-bg::after{
   top: -5px;
   right: -5px;
-  border-color: transparent transparent #BF986E;
+  border-color: transparent transparent var(--secendary-color);
   border-radius: 100%;
   transform: rotate(45deg);
 }
@@ -74,4 +74,7 @@ ion-card{
 }
 a{
   text-decoration: none;
+}
+ion-toolbar{
+  --background: white;
 }

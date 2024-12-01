@@ -1,27 +1,25 @@
 <div class="bg"></div>
 <ion-header [translucent]="false">
   <ion-toolbar>
-    <ion-img slot="start" src="assets/sgs-new-logo-dark.png" class="logo"></ion-img>
+    <ion-img slot="start" src="assets/SGSNEWLOGOdark.svg" class="logo"></ion-img>
     <ion-buttons slot="end">
-      <ion-button class="lang">EN</ion-button>
+      <ion-button (click)="changeLang()">{{lang}}</ion-button>
     </ion-buttons>
-
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
   <ion-text>
-    <h1 style="font-weight: bold;color: #a17b52;margin: 20px 0 0;" i18n>أهداف الهيئة</h1>
+    <h1 style="font-weight: bold;color: var(--main-color);margin: 20px 0 0;" i18n>{{header}}</h1>
   </ion-text>
   <ion-breadcrumbs class="ion-no-padding">
-    <ion-breadcrumb routerLink="/tabs/tab1" style="font-size: 14px;color: #402202;" i18n>الرئيسية</ion-breadcrumb>
-    <ion-breadcrumb href="#" style="font-size: 14px;color: #402202;" i18n>أهداف الهيئة</ion-breadcrumb>
+    <ion-breadcrumb routerLink="/tabs/tab1" style="font-size: 14px;color: var(--secendary-color);" i18n>{{home}}</ion-breadcrumb>
+    <ion-breadcrumb style="font-size: 14px;color: var(--secendary-color);" i18n>{{header}}</ion-breadcrumb>
   </ion-breadcrumbs>
   <ion-text>
-    <div class="text-editor page-editor  " style="color:#160000;">
-
+    <div class="text-editor page-editor  " style="color:var(--main-color);" *ngIf="lang==='EN'">
 <p i18n>تحقيقا للرؤى والتطلعات الاستراتيجية التي أُنشئت الهيئة من أجلها، وتحقيقا لرسالتها بصورة رئيسة لتزويد المجتمع بالمعلومات الجيولوجية الأساسية، فقد بلورت الهيئة أهدافها الرئيسة (Principle Goals) علي النحو التالي:</p>
 <h4 i18n>تزويد المجتمع بالمعلومات والخرائط الجيولوجية الأساسية</h4>
-<p><span style="color: #402202;" i18n>يتحقق هذا الهدف بإثراء وتحديث قواعد معلومات علوم الأرض من نتائج أعمال المسح الجيولوجي المستدام والمستمر لتغطية كافة أراضي المملكة بخرائط جيولوجية ذات مقاييس رسم مختلفة. وتُعتبر خرائط الأساس الطبوغرافية والجغرافية، والصور الجوية، وصور الأقمار الاصطناعية ركائز أساسية لأعمال المسح الجيولوجي، وإعداد الخرائط الجيولوجية التي تخدم وتدعم أعمال التنقيب عن الموارد المعدنية وأعمال الجيولوجيا التطبيقية لتحقيق أهداف الهيئة الأخرى</span></p>
+<p><span style="color: var(--secendary-color);" i18n>يتحقق هذا الهدف بإثراء وتحديث قواعد معلومات علوم الأرض من نتائج أعمال المسح الجيولوجي المستدام والمستمر لتغطية كافة أراضي المملكة بخرائط جيولوجية ذات مقاييس رسم مختلفة. وتُعتبر خرائط الأساس الطبوغرافية والجغرافية، والصور الجوية، وصور الأقمار الاصطناعية ركائز أساسية لأعمال المسح الجيولوجي، وإعداد الخرائط الجيولوجية التي تخدم وتدعم أعمال التنقيب عن الموارد المعدنية وأعمال الجيولوجيا التطبيقية لتحقيق أهداف الهيئة الأخرى</span></p>
 <h5 i18n>الأهداف المرحلية</h5>
 <ul>
 <li i18n>&nbsp;تنفيذ الخرائط الجيولوجية، وإعداد التقارير الجيولوجية لمناطق المسح الجيولوجي حسب مقاييس الرسم المناسبة للمشاريع المختلفة وطبقاً للمقاييس والمعايير العالمية.</li>
@@ -46,7 +44,7 @@
 <li>التواصل مع الهيئات العالمية لتسهيل حصول الهيئة على التقنيات والتطبيقات الحديثة في مجالات برامج المسح الجيولوجي وإنتاج الخرائط.&nbsp;</li>
 </ol>
 <h4>تأمين احتياطيات إستراتيجية مستدامة من الموارد المعدنية</h4>
-<p><span style="color: #402202;">يتحقق هذا الهدف بالاستكشاف المستمر عن الموارد المعدنية بشقيها الفلزي واللافلزي، والاستغلال الأمثل لهما لتنويع مصادر الدخل القومي.</span></p>
+<p><span style="color: var(--secendary-color);">يتحقق هذا الهدف بالاستكشاف المستمر عن الموارد المعدنية بشقيها الفلزي واللافلزي، والاستغلال الأمثل لهما لتنويع مصادر الدخل القومي.</span></p>
 <h5>الأهداف المرحلية</h5>
 <ul>
 <li>تجميع المعلومات الضرورية لتحديد وحصر التواجدات المعدنية.</li>
@@ -69,7 +67,7 @@
 <li>إتباع الأساليب الحديثة في مجال التطبيقات الصناعية والمعالجة المثلى للخامات المعدنية.</li>
 </ol>
 <h4>رصد ومراقبة ودراسة المخاطر الجيولوجية، والمساهمة في الحد من آثارها</h4>
-<p><span style="color: #402202;">تُعتبر المخاطر الجيولوجية الناجمة عن العمليات الطبيعية من الأحداث التي تعرض المجتمعات لأخطار الخسائر البشرية والمادية والتي منها الحركات الأرضية، والنشاطات البركانية، والانخسافات، والانهيارات الأرضية، والانزلاقات الأرضية، والفيضانات، ومشاكل الزحف الرملي، وانبعاث الغازات، ومخاطر الإشعاعات الضارة.</span></p>
+<p><span style="color: var(--secendary-color);">تُعتبر المخاطر الجيولوجية الناجمة عن العمليات الطبيعية من الأحداث التي تعرض المجتمعات لأخطار الخسائر البشرية والمادية والتي منها الحركات الأرضية، والنشاطات البركانية، والانخسافات، والانهيارات الأرضية، والانزلاقات الأرضية، والفيضانات، ومشاكل الزحف الرملي، وانبعاث الغازات، ومخاطر الإشعاعات الضارة.</span></p>
 <h5>الأهداف المرحلية</h5>
 <ul>
 <li>الرصد والمراقبة المستمرة للمخاطر الطبيعية.</li>
@@ -90,7 +88,7 @@
 <li>تجهيز ونشر المعلومات المستقاه من أعمال الرصد والمراقبة على هيئة تقارير وخرائط.</li>
 </ol>
 <h4>دراسة المشاكل البيئية المرتبطة بالمخاطر الجيولوجية، والأخرى الناجمة عن التوسع الحضري</h4>
-<p><span style="color: #402202;">إن المشاكل البيئية المصاحبة للمشاريع التنموية تحتاج إلى حلول تعتمد بصورة مباشرة على العلوم والمعرفة الجيولوجية. ومن هنا أخذت الاستراتيجية في اعتبارها الاهتمام بتلك المشاكل ورسم السياسات العلمية للتغلب عليها. إن التوسع الحضري والتكنولوجي المحموم المصاحب لنشاطات الإنسان يؤدي إلى إحداث خلل في الأنظمة البيئية المُشكلة للأرض، والتي تؤدي في نهاية المطاف إلى تهديد حياة الإنسان وممتلكاته. والتقليل من هذه المخاطر لا بد من فهم الكيفية التي تعمل بها الأنظمة المكونة للأرض وآثار التوسع الصناعي، والزراعي، والاجتماعي، والتكنولوجي في خلخلة الإتزان الطبيعي لتلك الأنظمة.</span></p>
+<p><span style="color: var(--secendary-color);">إن المشاكل البيئية المصاحبة للمشاريع التنموية تحتاج إلى حلول تعتمد بصورة مباشرة على العلوم والمعرفة الجيولوجية. ومن هنا أخذت الاستراتيجية في اعتبارها الاهتمام بتلك المشاكل ورسم السياسات العلمية للتغلب عليها. إن التوسع الحضري والتكنولوجي المحموم المصاحب لنشاطات الإنسان يؤدي إلى إحداث خلل في الأنظمة البيئية المُشكلة للأرض، والتي تؤدي في نهاية المطاف إلى تهديد حياة الإنسان وممتلكاته. والتقليل من هذه المخاطر لا بد من فهم الكيفية التي تعمل بها الأنظمة المكونة للأرض وآثار التوسع الصناعي، والزراعي، والاجتماعي، والتكنولوجي في خلخلة الإتزان الطبيعي لتلك الأنظمة.</span></p>
 <h5>الأهداف المرحلية</h5>
 <ul>
 <li>فهم مصادر ومسارات مشاكل التلوث التي تهدد البيئة.</li>
@@ -113,7 +111,7 @@
 <li>دراسة العوامل التي تتحكم في اتزان معدلات التغذية للموارد المعدنية.</li>
 </ol>
 <h4>دعم المشاريع الإنشائية والحضرية بدراسات الجيولوجيا الهندسية</h4>
-<p><span style="color: #402202;">تُعتبر دراسات الجيولوجيا الهندسية ذات منفعة كبرى للمشاريع الإنشائية والحضرية وتسهم في التعرف على حالة الإستقرار بين المواقع والمنشآت المشيدة فيها، وذلك من خلال التعرف على المعلومات الجيولوجية الهندسية للبنية الأرضية لهذه المواقع.</span></p>
+<p><span style="color: var(--secendary-color);">تُعتبر دراسات الجيولوجيا الهندسية ذات منفعة كبرى للمشاريع الإنشائية والحضرية وتسهم في التعرف على حالة الإستقرار بين المواقع والمنشآت المشيدة فيها، وذلك من خلال التعرف على المعلومات الجيولوجية الهندسية للبنية الأرضية لهذه المواقع.</span></p>
 <h5>الأهداف المرحلية</h5>
 <ul>
 <li>اختيار أنسب المواقع للمشاريع الإنشائية، والإنمائية، والتعدينية.</li>
@@ -133,7 +131,7 @@
 <li>الاستعانة بمعلومات المخاطر الجيولوجية والبيئية في المشاريع الإنشائية.</li>
 </ol>
 <h4>بناء وتطوير قواعد المعلومات الوطنية لعلوم الأرض</h4>
-<p><span style="color: #402202;">إن قواعد معلومات علوم الأرض هي قواعد معلومات مرتبطة فيما بينها لتُألف منظومة لقاعدة معلومات أساسية يتشكل بنيانها وتستقي معلوماتها من مختلف البرامج والمشاريع الفنية للهيئة. ويؤدي هذا الهدف إلى إيجاد قاعدة معلومات وطنية يُعتد بها لغرض تزويد المجتمع بالمعلومات الجيولوجية الموثقة لخدمة المشاريع الإنمائية ولإعداد البحوث العلمية والدراسات المختلفة</span></p>
+<p><span style="color: var(--secendary-color);">إن قواعد معلومات علوم الأرض هي قواعد معلومات مرتبطة فيما بينها لتُألف منظومة لقاعدة معلومات أساسية يتشكل بنيانها وتستقي معلوماتها من مختلف البرامج والمشاريع الفنية للهيئة. ويؤدي هذا الهدف إلى إيجاد قاعدة معلومات وطنية يُعتد بها لغرض تزويد المجتمع بالمعلومات الجيولوجية الموثقة لخدمة المشاريع الإنمائية ولإعداد البحوث العلمية والدراسات المختلفة</span></p>
 <h5>الأهداف المرحلية:</h5>
 <ul>
 <li>بناء قاعدة معلومات الخرائط الجيولوجية وتطويرها.</li>
@@ -159,7 +157,7 @@
 <li>استرجاع المعلومات الجيولوجية، وتوثيقها بجمع التقارير، والخرائط وصور "الموزاييك"، والإحداثيات، والترقيم النقطي من مصادرها الأصلية.</li>
 </ol>
 <h4>دعم وتقديم المشورة ذات الصلة بعلوم الأرض للجهات الحكومية والخاصة</h4>
-<p><span style="color: #402202;">يُؤدي تحقيق هذا الهدف إلى تنمية التعاون الفني والعلمي مع الجهات الحكومية والخاصة، التي قد تحتاج للمشورة والمعلومات المتعلقة بأعمالها، وتشجيع إعداد البحوث المتخصصة في مجال الجيولوجيا كأساس هام للتعاون بين الهيئة والجهات الأكاديمية ذات العلاقة باعتبارها تعمل على توفير قاعدة من المعلومات الموثّقة التي تهدف بالدرجة الأولى إلى تحديث وإثراء معلومات شريحة واسعة من المهتمين بعلوم الأرض.</span></p>
+<p><span style="color: var(--secendary-color);">يُؤدي تحقيق هذا الهدف إلى تنمية التعاون الفني والعلمي مع الجهات الحكومية والخاصة، التي قد تحتاج للمشورة والمعلومات المتعلقة بأعمالها، وتشجيع إعداد البحوث المتخصصة في مجال الجيولوجيا كأساس هام للتعاون بين الهيئة والجهات الأكاديمية ذات العلاقة باعتبارها تعمل على توفير قاعدة من المعلومات الموثّقة التي تهدف بالدرجة الأولى إلى تحديث وإثراء معلومات شريحة واسعة من المهتمين بعلوم الأرض.</span></p>
 <h5>الأهداف المرحلية:</h5>
 <ul>
 <li>تقديم الخدمات الاستشارية للجهات الحكومية والخاصة في مجال أعمال الهيئة.</li>
@@ -176,11 +174,165 @@
 </ol>
 <p>&nbsp;</p>
 
-                                                  </div>
+</div>
+<div class="text-editor page-editor  " style="color:var(--main-color);" *ngIf="lang==='ع'">
+
+<h4>To provide the government and the nation with relevant geological information and maps for sound decision-making and policy development&nbsp;</h4>
+<p><span style="color: var(--secendary-color);">This objective is achieved by the continuous updating of geologic maps and their respective geoscience database entries, based on the results of ongoing geological surveys that cover all of the quadrangles of the Kingdom. Topographic and geographical base maps, aerial photographs, and satellite imageries are fundamental tools in geological surveys and mapping that serve and support mineral resource prospecting and applied geological activities.</span></p>
+<h5>Priority Targets</h5>
+<ul>
+<li>To publish geologic maps and technical reports for the surveyed areas, based on appropriate scales for the different SGS projects in accordance with international standards.</li>
+<li>To conduct geodetic surveys to serve the needs of basic geological surveys and mineral resource prospecting.</li>
+<li>To conduct marine and desert as well as geohazard and environmental surveys.</li>
+<li>To continuously update the geological databases from the results of these geological surveys.</li>
+</ul>
+<h5>This objective is accomplished through the following SGS policies, namely</h5>
+<ol>
+<li>The completion of the production of basic geological maps for all areas of the Kingdom in a scale of 1:100,000.</li>
+<li>-he continuation of the production of geological maps in the scales of 1:250,000 and 1:500,000, covering all areas of the Kingdom, as well as the updating of these maps whenever needed.</li>
+<li>The continuation of the production and updating of the geologic maps of mineral deposits in the Kingdom in different scales.</li>
+<li>The continuation of the development of digital databases.</li>
+<li>The conduct of geochemical and geophysical surveys to support mineral exploration.</li>
+<li>The use of GIS technologies to produce digital maps and to digitize old maps.</li>
+<li>The use of the National Geodetic Network information in geologic surveying and mapping.</li>
+<li>The use of modern digital technologies in aerial photography and in high-resolution satellite imageries in geologic surveying and mapping.</li>
+<li>The use of geodetic technologies and GPS systems in geologic surveying.</li>
+<li>The storing and cataloging of the original maps, aerial photographs, and survey results.</li>
+<li>The setting up of connection with international bodies to facilitate SGS’ access to modern technologies, software, and applications in the fields of geological surveying and mapping.</li>
+</ol>
+<h4>To promote the sustainable development and utilization of Saudi Arabia’s mineral resources</h4>
+<p><span style="color: var(--secendary-color);">This objective is achieved through the continued exploration and optimization activities for mineral resources, both metallic and non-metallic, in order to diversify the sources of national income.</span></p>
+<h5>Priority Targets</h5>
+<ul>
+<li>To collect necessary information to identify and make an inventory of mineral deposits.</li>
+<li>To search and prospect for mineral resources, using state-of-the-art scientific technologies and to assess, develop, and optimize their uses.</li>
+<li>To conduct regional and local surveys of mineralized zones and belts to identify areas with positive potentials.</li>
+<li>To map in detail and evaluate promising mineral ore deposits.</li>
+<li>To search for water resources in potential areas as well as in mining and mineralization sites.</li>
+<li>To identify mineral resources along island coasts and in the deep seabeds.</li>
+</ul>
+<h5>This objective is accomplished through a range of policies, namely</h5>
+<ol>
+<li>The aiming of general and regional exploration towards the discovery of new areas of mineral deposits and the identification of potential zones of water resources.</li>
+<li>The prioritization of the exploration and prospecting for minerals of economic and strategic importance to the state.</li>
+<li>The identification and documentation of mineral deposits and water resources in the Kingdom.</li>
+<li>The determination of norms and standards for ores in order to meet the basic needs of the mining sector in the country.</li>
+<li>The classification of promising mineral sites and making them available as investment sites and opportunities for public investment.</li>
+<li>The use of geophysical techniques and geochemical methods in the determination of mineralization potentials of unexplored zones that are underlain by the Phanerozoic rocks.</li>
+<li>The follow up of the latest theories and techniques in the field of mineral resource exploration.</li>
+<li>The employment of the latest methods and models in the field of treatment of mineral ores and their industrial applications.</li>
+</ol>
+<h4>To study and monitor the occurrences of geohazards and provide mitigation advice and measures against their detrimental effects to lives and properties.</h4>
+<p><span style="color: var(--secendary-color);">Geohazards resulting from natural processes are events that expose communities to the risks of human and material losses. These natural phenomena include earthquakes, volcanic eruptions, subsidence, landslides, flooding, sand migration and encroachments, gas emissions, and harmful radiations.</span></p>
+<h5>Priority Targets</h5>
+<ul>
+<li>To continuously monitor the occurrence of natural hazards.</li>
+<li>To understand the causes and effects of geologic hazards.</li>
+<li>To respond rapidly during incidences of geohazards and provide emergency and sound recommendations to the relevant authorities to deal with the impacts of the geohazards.</li>
+<li>To focus on monitoring volcanic activities and seismic movements in areas that are most vulnerable to them.</li>
+<li>To educate all sectors of the society about potential geologic hazards and their effects and how to respond to them and their impacts.</li>
+<li>To identify and understand the interrelationships of the geological processes that cause natural hazards by conducting specialized geological studies.</li>
+</ul>
+<h5>This objective is accomplished through a range of policies, namely:</h5>
+<ol>
+<li>The establishment of monitoring networks in areas with high potential in the occurrences of geologic hazards.</li>
+<li>The continuous updating and development of monitoring and management techniques for geohazards.</li>
+<li>The linking and networking of monitoring information with other information databases and stations.</li>
+<li>The analysis and comparison of local seismic monitoring results with counterparts from the global monitoring stations.</li>
+<li>The dissemination of awareness preparation leaflets and guidelines on geohazards in order to educate all sectors of the society about how To reduce the effects of geohazards and mitigate their damages.</li>
+<li>The training and development of national cadres on the use of new monitoring, control, and analytical technologies.</li>
+<li>The preparation, publication, and dissemination of information derived from monitoring data in the forms of reports and maps.</li>
+</ol>
+<h4>To study and understand the environmental problems that are associated with urban expansions and infrastructural developments and to provide technical advice to help solve these consequential problems</h4>
+<p><span style="color: var(--secendary-color);">Environmental problems associated with development projects need solutions that depend directly on geological science and its applications. Accordingly, the SGS has also formulated priority strategies to address these problems, which can be used for sound policy development for environmental governance. Major and accelerated human activities, such as urban and technological expansions may consequently lead to the disruption of the Earth's terrestrial and marine ecosystems, which ultimately threatens human life, well-being, and properties. In order to minimize these risks, it is imperative to understand how the terrestrial systems work as well as to identify the impacts of industrial, agricultural, social, and technological expansions in disrupting the natural equilibrium of these systems.</span></p>
+<h5>Priority Targets</h5>
+<ul>
+<li>To understand the sources and pathways of pollution that threaten the environment.</li>
+<li>To contribute in the reduction or control of the threats of environmental problems to humans.</li>
+<li>To assess the effects of various mining operations on environmental health.</li>
+<li>To understanding the causes of historical environmental changes.</li>
+<li>To develop and manage mineral resources with regards to the principles of environmental protection and sustainable development.</li>
+<li>To minimize the harmful effects of uncontrolled waste disposal into the environment.</li>
+<li>To increase community awareness on the importance of earth science in developing successful methods for environmental protection and preservation.</li>
+</ul>
+<h5>This objective is accomplished through a range of policies, namely</h5>
+<ol>
+<li>The study and analysis of the climatic and geological conditions of the past and the present and the identification of their impacts on the Saudi Arabia’s ecosystem.</li>
+<li>The study of the effects of pollution and environmental degradation on biodiversity.</li>
+<li>The review and survey of extinct species in historical geologic periods in order to understand environmental changes in Saudi Arabia with respect to its biota.</li>
+<li>The study geological factors affecting environmental problems.</li>
+<li>The analysis of the impact of environmental problems on human and biological lives, marine and terrestrial waters, and air.</li>
+<li>The use of geological information as basis in the selection of sites most suitable for waste disposal systems.</li>
+<li>The documentation of geological information relevant to the terrestrial environment and resources (air, water, soil, rocks, and minerals).</li>
+</ol>
+<h4>To support construction and urban projects by conducting engineering geology studies</h4>
+<p><span style="color: var(--secendary-color);">Engineering geology studies are of great benefit to construction and urban projects and contribute largely in the determination of the stabilities of the infrastructures, sites, and facilities through the identification of their engineering geological properties and characteristics of the substrates and foundations of the sites.</span></p>
+<h5>Priority Targets</h5>
+<ul>
+<li>To select sites most suitable for construction and infrastructural projects.</li>
+<li>To participate in the planning phases of construction projects.</li>
+<li>To identify and evaluate the engineering properties of construction materials and blocks.</li>
+<li>To contribute in the development and adoption of engineering geology standards and regulations in Saudi Arabia.</li>
+<li>To identify problems associated with construction projects in their different phases and to develop appropriate solutions to address them.</li>
+<li>To provide and update the engineering geology databases.</li>
+<li>To evaluate the integrity of ground structures around construction project sites.</li>
+</ul>
+<h5>This objective is accomplished through a range of policies, namely</h5>
+<ol>
+<li>To conduct consultations for the implementation of engineering geology studies for construction projects and sites.</li>
+<li>To study the physical and mechanical properties of building materials.</li>
+<li>To use remote sensing technologies and GIS systems in the preparation of engineering geology studies and maps.</li>
+<li>To create engineering geology maps of major cities and project sites and their surroundings.</li>
+<li>To use geological and environmental hazard information in construction projects.</li>
+</ol>
+<h4>To build and develop the national geoscience database</h4>
+<p><span style="color: var(--secendary-color);">Geoscience databases are interlinked information bases that constitute a basic database system, the structure and information of which are derived from the various programs and technical projects of the SGS. This objective results in the creation of a national to provide geological information address the demands and needs of development projects, scientific research, and other relevant studies.</span></p>
+<h5>The interim goals are focused on the building and development of databases for:</h5>
+<ul>
+<li>Geological maps.</li>
+<li>Mineralization sites.</li>
+<li>Water resources.</li>
+<li>Geophysical surveys.</li>
+<li>Chemical analyses.</li>
+<li>Drillings and boreholes.</li>
+<li>Climate.</li>
+<li>Environmental geology.</li>
+<li>Engineering geology.</li>
+<li>Mining.</li>
+<li>Remote sensing.</li>
+<li>Aerial photography.</li>
+<li>Technical reports.</li>
+<li>Geohazards.</li>
+<li>Retrieval and documentation of other geologic information.</li>
+</ul>
+<h5>This objective is accomplished through a range of policies, namely:</h5>
+<ol>
+<li>The design of the I/O modules by the modular construction of database domains and the definition of their general characteristics in their link to the GIS systems in order to aid the production of maps.</li>
+<li>The retrieval and documentation of geological information through the collection of reports, maps, images, and videos from their original sources.</li>
+</ol>
+<h4>To provide geoscientific advice and consultation to the government and private entities</h4>
+<p><span style="color: var(--secendary-color);">Achieving this objective will lead to the development of technical and scientific cooperation’s between the governmental and the private sectors that may need advice and scientific information in regard to their works. Specialized research in the field of geology serve as an important and major basis for cooperation and collaboration between the SGS and academic institutions, given that SGS maintains a base of substantial geoscientific information.</span></p>
+<h5>Priority Targets</h5>
+<ul>
+<li>To provide advice and consultations to the government and private bodies within the scope of works of the SGS.</li>
+<li>To provide government agencies, universities, and research institutes with basic and applied geological information.</li>
+<li>To participate in relevant development projects with the government and private bodies.</li>
+<li>To encourage scientific research by establishing joint projects with universities and research institutes in the Kingdom.</li>
+</ul>
+<h5>This objective is accomplished through a range of policies, namely</h5>
+<ol>
+<li>The development and coordination of public relations with government agencies to introduce SGS’ functions, objectives, and policies.</li>
+<li>The establishment of communication channels with scientific bodies to provide information and consultations with their senior management personnel.</li>
+<li>The establishment and nurturance of relationships with relevant stakeholders through direct communication, media and advertising channels.</li>
+<li>The development and establishment of standards and controls for the preparation and publication of studies and research conducted by the SGS.</li>
+</ol>
+
+                                              </div>
+
   </ion-text>
 </ion-content>
 <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="back()">
   <ion-fab-button title="تراجع">
-    <ion-icon name="caret-back-outline"></ion-icon>
+    <ion-icon id="backIcon" name="caret-back-outline"></ion-icon>
   </ion-fab-button>
 </ion-fab>

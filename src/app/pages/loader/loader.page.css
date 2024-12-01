@@ -1,7 +1,7 @@
 .splash-bg{
   height: 100vh;
   width: 100%;
-  background:linear-gradient(45deg, rgba(154,125,90,1) 0%, rgba(29,36,55,1) 100%);
+  background: linear-gradient(45deg, rgb(92, 73, 49) 0%, rgb(0, 14, 26) 100%);
   background-size: 300% 300%;
   animation: color 5s ease-in-out infinite;
 }
