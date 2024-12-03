@@ -11,7 +11,7 @@ export class LoaderPage implements OnInit {
   constructor(public router:Router) {
     setTimeout(()=>{
       this.router.navigateByUrl('tabs/tab1')
-    },2000)
+    },4000)
    }
 
   ngOnInit() {
